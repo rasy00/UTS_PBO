@@ -10,9 +10,9 @@ Aplikasi pengelolaan parkir ini dapat memudahkan kita dalam mengelola kendaraan 
 - **Pindah ke direktori yang terdapat file dan folder yang sudah didownload**
 - **Ketikan command ini : **
   ```
-    javac UTS/App.java
-    java UTS.App
-   ```
+   javac UTS/App.java
+   java UTS.App
+  ```
 
 
 ## Fitur
