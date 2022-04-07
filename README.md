@@ -18,10 +18,16 @@ Aplikasi pengelolaan parkir ini dapat memudahkan kita dalam mengelola kendaraan 
 #### Mengganti tarif
 - Masuk kedalam class Parkir
 - cari baris kode :
-``` tarif = x.type.toLowerCase().equals("motor") ? 2000 + (dt[0]*1000) + (dt[1]*100) : 5000 + (dt[0]*2000) + (dt[1]*200); ```
+``` 
+tarif = x.type.toLowerCase().equals("motor") ? 2000 + (dt[0]*1000) + (dt[1]*100) : 5000 + (dt[0]*2000) + (dt[1]*200); 
+```
   - Jika ingin merubah tarif awal untuk motor : ganti angka '2000' menjadi nominal yang mau anda tetapkan.
     contoh :
-    ``` tarif = x.type.toLowerCase().equals("motor") ? 1000 + (dt[0]*1000) + (dt[1]*100) : 5000 + (dt[0]*2000) + (dt[1]*200); ```
+    ``` 
+    tarif = x.type.toLowerCase().equals("motor") ? 1000 + (dt[0]*1000) + (dt[1]*100) : 5000 + (dt[0]*2000) + (dt[1]*200); 
+    ```
     atau
-    ``` tarif = x.type.toLowerCase().equals("motor") ? 3000 + (dt[0]*1000) + (dt[1]*100) : 5000 + (dt[0]*2000) + (dt[1]*200); ```
+    ``` 
+    tarif = x.type.toLowerCase().equals("motor") ? 3000 + (dt[0]*1000) + (dt[1]*100) : 5000 + (dt[0]*2000) + (dt[1]*200); 
+    ```
   - Jika ingin merubah tarif awal untuk mobil : ganti angka '5000' menjadi nominal yang mau anda tetapkan
