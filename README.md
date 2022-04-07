@@ -13,7 +13,6 @@ Aplikasi pengelolaan parkir ini dapat memudahkan kita dalam mengelola kendaraan 
    javac UTS/App.java
    java UTS.App
   ```
-
-
+  
 ## Fitur
-### 1). Mengganti tarif 
+#### Mengganti tarif
