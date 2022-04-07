@@ -41,14 +41,16 @@ tarif = x.type.toLowerCase().equals("motor") ? 2000 + (dt[0]*1000) + (dt[1]*100)
     tarif = x.type.toLowerCase().equals("motor") ? 2000 + (dt[0]*1000) + (dt[1]*100) : 4000 + (dt[0]*2000) + (dt[1]*200); 
     ```
 
-  - Jika ingin merubah tarif berdasarkan kenaikan jam : ganti angka setelah ```dt[0]*```
+  - Jika ingin merubah tarif berdasarkan kenaikan jam : ganti angka setelah ```dt[1]*```
     contoh :
     ``` 
-    tarif = x.type.toLowerCase().equals("motor") ? 2000 + (dt[0]*2000) + (dt[1]*100) : 4000 + (dt[0]*4000) + (dt[1]*200); 
+    tarif = x.type.toLowerCase().equals("motor") ? 2000 + (dt[0]*1000) + (dt[1]*200) : 4000 + (dt[0]*2000) + (dt[1]*300); 
     ```
     atau
     ``` 
-    tarif = x.type.toLowerCase().equals("motor") ? 2000 + (dt[0]*900) + (dt[1]*100) : 4000 + (dt[0]*1000) + (dt[1]*200); 
+    tarif = x.type.toLowerCase().equals("motor") ? 2000 + (dt[0]*1000) + (dt[1]*50) : 4000 + (dt[0]*2000) + (dt[1]*100); 
     ```
+    
+    
     
    
