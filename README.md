@@ -14,8 +14,7 @@ Aplikasi pengelolaan parkir ini dapat memudahkan kita dalam mengelola kendaraan 
    java UTS.App
   ```
   
-## Fitur
-#### Mengganti tarif
+## Mengganti tarif
 - Masuk kedalam class Parkir
 - cari baris kode :
 ``` 
@@ -50,7 +49,11 @@ tarif = x.type.toLowerCase().equals("motor") ? 2000 + (dt[0]*1000) + (dt[1]*100)
     ``` 
     tarif = x.type.toLowerCase().equals("motor") ? 2000 + (dt[0]*1000) + (dt[1]*50) : 4000 + (dt[0]*2000) + (dt[1]*100); 
     ```
-    
-    
-    
-   
+
+## fitur
+[] Autocorrect format nomor polisi
+[x] Auto generate waktu untuk masuk dan keluar
+[x] Tabel daftar parkir
+[] Auto save history ketika session berakhir
+[] PDF untuk struk tarif
+[] sistem login
