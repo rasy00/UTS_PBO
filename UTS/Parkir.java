@@ -1,6 +1,8 @@
 package UTS;
 public class Parkir {
     public Kendaraan [] field = new Kendaraan[0];
+    public int tarifMotorPertama = 2000,tarifMotorPerJam = 1000,tarifMotorPerMenit = 100;
+    public int tarifMobilPertama = 5000,tarifMobilPerJam = 2000,tarifMobilPerMenit = 200;
 
     private String sendData(Kendaraan data){
         Kendaraan[] result;
@@ -52,21 +54,24 @@ public class Parkir {
         Kendaraan[] tempArrObjek;
         int index = 0;
         
-        if((x.nopol != null && x.type == null)||(x.nopol == null && x.type != null) || (x.nopol == null && x.type == null)){
+        if(x == null){
             msg = nopol+" with type : "+ type  + " is not found";
         }else {
             tempArrObjek = new Kendaraan[this.field.length-1];
             for(int i = 0; i<this.field.length; i++){
-                if(!(this.field[i].nopol.toLowerCase().equals(nopol.toLowerCase()))){
+
+                if((this.field[i].nopol.toLowerCase().equals(nopol.toLowerCase()))&&(this.field[i].type.toLowerCase().equals(type.toLowerCase()))){
+                    continue;
+                }else{
                     tempArrObjek[index] = this.field[i];
                     index++;
-                }else{
-                    continue;
                 }
             }
             this.field = tempArrObjek;
             msg = x.nopol + " Selamat dijalan"; 
         }
+
+        System.out.println(msg +"\t"+ x.type);
         return msg;
     }
 
@@ -90,9 +95,10 @@ public class Parkir {
         try{
             x = this.search(nopol, type);
             dt = hitungDurasi(x.tglMasuk, x.jamMasuk);
-            tarif = x.type.toLowerCase().equals("motor") ? 2000 + (dt[0]*1000) + (dt[1]*100) : 5000 + (dt[0]*2000) + (dt[1]*200);
             jam = dt[0];
-            menit = dt[1];    
+            menit = dt[1];
+            tarif = x.type.toLowerCase().equals("motor") ? tarifMotorPertama + (jam*tarifMotorPerJam) + (menit*tarifMotorPerMenit) : tarifMobilPertama + (jam*tarifMobilPerJam) + (menit*tarifMobilPerMenit);
+
         }catch(Exception e){
             System.out.println("Data tidak ditemukan");
         }
